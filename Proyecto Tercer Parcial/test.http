@@ -1,0 +1,70 @@
+
+@api=http://localhost:3300
+
+GET {{api}}/customers
+
+###
+GET {{api}}/employees
+
+###
+GET {{api}}/shippers
+
+###
+GET {{api}}/products
+
+###
+GET {{api}}/products/1
+
+###
+POST {{api}}/order
+Content-Type: application/json
+
+{
+    "OrderID":11130,
+    "CustomerID":"VINET",
+    "EmployeeID":5,
+    "OrderDate":"1996-07-04T00:00:00.000",
+    "RequiredDate":"1996-07-04T00:00:00.000",
+    "ShipVia":3,
+    "Freight":32.89,
+    "ShipName":"Vins et alcools Chevalier",
+    "ShipAddress":"59 rue de lAbbaye",
+    "ShipCity":"Reims",
+    "ShipRegion":"Europa ",
+    "ShipPostalCode":"51100",
+    "ShipCountry":"France",
+    "ShippedDate":"1996-07-16T00:00:00.000"
+}
+
+###
+GET {{api}}/lastOrder
+
+###
+POST {{api}}/orderDetail
+Content-Type: application/json
+
+{
+    "OrderID":11130,
+    "ProductID":1,
+    "UnitPrice":15,
+    "Quantity":5,
+    "Discount":0.15
+}
+
+
+###
+
+PUT {{api}}/existencias/1
+Content-Type: application/json
+
+{
+  "UnitsInStock": 29,
+  "UnitsOnOrder": 6
+}
+
+
+###
+GET {{api}}/infoFacturaOrder/11126
+
+###
+GET {{api}}/infoDetails/11135
